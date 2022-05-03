@@ -1,0 +1,124 @@
+03/05/2022 
+ virtualenv traj_pred_cv_LSTM
+created virtual environment CPython3.8.10.final.0-64 in 119ms
+  creator CPython3Posix(dest=/home/royasiku/traj_pred_cv_LSTM, clear=False, global=False)
+  seeder FromAppData(download=False, pip=latest, setuptools=latest, wheel=latest, pkg_resources=latest, via=copy, app_data_dir=/home/royasiku/.local/share/virtualenv/seed-app-data/v1.0.1.debian.1)
+  activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+
+               social-lstm-pytorch-group-distance-semi  social-lstm-pytorch-group-presence-semi
+README.md  social-lstm-pytorch-group-distance-obst  social-lstm-pytorch-group-presence-obst
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM$ cd social-lstm-pytorch-group-distance-semi
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ ls
+criterion.py  data  _DS_Store  grid.py  helper.py  log  model.py  obst_grid.py  sample.py  save  semi  st_graph.py  train.py  utils.py  visualize.py
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ python train.py
+Traceback (most recent call last):
+  File "train.py", line 7, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ pip install torch
+Collecting torch
+  Downloading torch-1.11.0-cp38-cp38-manylinux1_x86_64.whl (750.6 MB)
+     |████████████████████████████████| 750.6 MB 67 kB/s
+Collecting typing-extensions
+  Downloading typing_extensions-4.2.0-py3-none-any.whl (24 kB)
+Installing collected packages: typing-extensions, torch
+Successfully installed torch-1.11.0 typing-extensions-4.2.0
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ python train.py
+/home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages/torch/_masked/__init__.py:223: UserWarning: Failed to initialize NumPy: numpy.core.multiarray failed to import (Triggered internally at  ../torch/csrc/utils/tensor_numpy.cpp:68.)
+  example_input = torch.tensor([[-3, -2, -1], [0, 1, 2]])
+Traceback (most recent call last):
+  File "train.py", line 16, in <module>
+    from utils import DataLoader
+  File "/home/royasiku/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi/utils.py", line 11, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ pip install numpy
+Collecting numpy
+  Downloading numpy-1.22.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     |████████████████████████████████| 16.8 MB 12.3 MB/s
+Installing collected packages: numpy
+Successfully installed numpy-1.22.3
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ python --version
+Python 3.8.10
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ pip install scipy
+Collecting scipy
+  Downloading scipy-1.8.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (41.6 MB)
+     |████████████████████████████████| 41.6 MB 12.3 MB/s
+Requirement already satisfied: numpy<1.25.0,>=1.17.3 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from scipy) (1.22.3)
+Installing collected packages: scipy
+Successfully installed scipy-1.8.0
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ pip install matplotlib
+Collecting matplotlib
+  Downloading matplotlib-3.5.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (11.3 MB)
+     |████████████████████████████████| 11.3 MB 9.2 MB/s
+Collecting cycler>=0.10
+  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting pyparsing>=2.2.1
+  Downloading pyparsing-3.0.8-py3-none-any.whl (98 kB)
+     |████████████████████████████████| 98 kB 7.2 MB/s
+Collecting fonttools>=4.22.0
+  Downloading fonttools-4.33.3-py3-none-any.whl (930 kB)
+     |████████████████████████████████| 930 kB 10.7 MB/s
+Collecting python-dateutil>=2.7
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     |████████████████████████████████| 247 kB 10.6 MB/s
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.4.2-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+     |████████████████████████████████| 1.2 MB 7.8 MB/s
+Collecting packaging>=20.0
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 6.1 MB/s
+Collecting pillow>=6.2.0
+  Downloading Pillow-9.1.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+     |████████████████████████████████| 4.3 MB 10.7 MB/s
+Requirement already satisfied: numpy>=1.17 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib) (1.22.3)
+Collecting six>=1.5
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: cycler, pyparsing, fonttools, six, python-dateutil, kiwisolver, packaging, pillow, matplotlib
+Successfully installed cycler-0.11.0 fonttools-4.33.3 kiwisolver-1.4.2 matplotlib-3.5.2 packaging-21.3 pillow-9.1.0 pyparsing-3.0.8 python-dateutil-2.8.2 six-1.16.0
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ pip install seaborn
+Collecting seaborn
+  Downloading seaborn-0.11.2-py3-none-any.whl (292 kB)
+     |████████████████████████████████| 292 kB 9.3 MB/s
+Requirement already satisfied: matplotlib>=2.2 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from seaborn) (3.5.2)
+Requirement already satisfied: scipy>=1.0 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from seaborn) (1.8.0)
+Requirement already satisfied: numpy>=1.15 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from seaborn) (1.22.3)
+Collecting pandas>=0.23
+  Downloading pandas-1.4.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.7 MB)
+     |████████████████████████████████| 11.7 MB 1.6 MB/s
+Requirement already satisfied: packaging>=20.0 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (21.3)
+Requirement already satisfied: python-dateutil>=2.7 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (2.8.2)
+Requirement already satisfied: cycler>=0.10 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (0.11.0)
+Requirement already satisfied: pillow>=6.2.0 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (9.1.0)
+Requirement already satisfied: pyparsing>=2.2.1 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (3.0.8)
+Requirement already satisfied: kiwisolver>=1.0.1 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (1.4.2)
+Requirement already satisfied: fonttools>=4.22.0 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from matplotlib>=2.2->seaborn) (4.33.3)
+Collecting pytz>=2020.1
+  Downloading pytz-2022.1-py2.py3-none-any.whl (503 kB)
+     |████████████████████████████████| 503 kB 10.9 MB/s
+Requirement already satisfied: six>=1.5 in /home/royasiku/traj_pred_cv_LSTM/lib/python3.8/site-packages (from python-dateutil>=2.7->matplotlib>=2.2->seaborn) (1.16.0)
+Installing collected packages: pytz, pandas, seaborn
+Successfully installed pandas-1.4.2 pytz-2022.1 seaborn-0.11.2
+(traj_pred_cv_LSTM) royasiku@mmlab-MS-7B46:~/Group-Obstacle-LSTM/social-lstm-pytorch-group-distance-semi$ python train.py
+Creating pre-processed data from raw data
+Training data from dataset 0 : 1520
+Validation data from dataset 0 : 381
+Training data from dataset 1 : 694
+Validation data from dataset 1 : 174
+Training data from dataset 2 : 841
+Validation data from dataset 2 : 211
+Training data from dataset 3 : 432
+Validation data from dataset 3 : 109
+Total number of training batches: 40
+Total number of validation batches: 5
+Traceback (most recent call last):
+  File "train.py", line 283, in <module>
+    main()
+  File "train.py", line 76, in main
+    train(args)
+  File "train.py", line 95, in train
+    log_file_curve = open(os.path.join(log_directory, 'log_curve.txt'), 'w')
+FileNotFoundError: [Errno 2] No such file or directory: 'log/0/log_curve.txt'
+
+
+
